@@ -1,62 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shambhavi Karpe | Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shambhavi Karpe — CS Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header class="hero">
-  <h1>Shambhavi Karpe</h1>
-  <p>Computer Science Engineering Student</p>
-  <button onclick="scrollToSection('projects')">View My Work</button>
-</header>
+    <!-- Noise overlay -->
+    <div class="noise"></div>
 
-<nav class="navbar">
-  <a href="#about">About</a>
-  <a href="#education">Education</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
-</nav>
+    <!-- Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
 
-<section id="about" class="section">
-  <h2>About Me</h2>
-  <p>Passionate about AI, Data Analysis, and solving real-world problems using technology.</p>
-</section>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-logo">SK<span class="dot">.</span></div>
+        <ul class="nav-links">
+            <li><a href="#about" data-text="About">About</a></li>
+            <li><a href="#education" data-text="Education">Education</a></li>
+            <li><a href="#projects" data-text="Projects">Projects</a></li>
+            <li><a href="#contact" data-text="Contact">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
 
-<section id="education" class="section">
-  <h2>Education</h2>
-  <div class="card">
-    <h3>B.Tech Computer Science</h3>
-    <p>MIT VPU, Solapur (2025 - Present)</p>
-  </div>
-  <div class="card">
-    <h3>12th Grade</h3>
-    <p>SMP, Murum</p>
-  </div>
-</section>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#education" class="mobile-link">Education</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+    </div>
 
-<section id="projects" class="section">
-  <h2>Projects</h2>
-  <div class="grid">
-    <div class="card">AI4All: Mental Health</div>
-    <div class="card">Smart Dining Space</div>
-    <div class="card">Metal Recovery from E-Waste</div>
-  </div>
-</section>
+    <!-- Hero -->
+    <section id="hero">
+        <div class="hero-bg">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="grid-lines"></div>
+        </div>
+        <div class="hero-content">
+            <p class="hero-tag reveal">Based in Solapur, India</p>
+            <h1 class="hero-name reveal">
+                <span class="line">Shambhavi</span>
+                <span class="line italic">Karpe</span>
+            </h1>
+            <p class="hero-title reveal">Computer Science Engineering Student</p>
+            <p class="hero-sub reveal">Interested in <span class="highlight">Data Analysis</span> & <span class="highlight">Artificial Intelligence</span></p>
+            <div class="hero-cta reveal">
+                <a href="#projects" class="btn-primary">View Projects</a>
+                <a href="#contact" class="btn-ghost">Get in Touch</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
 
-<section id="contact" class="section">
-  <h2>Contact</h2>
-  <p>Email: shambhavikarpe12@gmail.com</p>
-  <p>GitHub: github.com/shambhavikarpe1206-dotcom</p>
-</section>
+    <!-- About -->
+    <section id="about">
+        <div class="section-label">01 — About</div>
+        <div class="about-grid">
+            <div class="about-text">
+                <h2 class="section-title reveal">Building intelligent systems that <em>matter</em></h2>
+                <p class="about-bio reveal">Born in Solapur, I spent two years in Latur and completed schooling in Murum before returning to Solapur for higher education. Currently pursuing my B.Tech at MIT VPU, I'm driven by a passion for turning complex problems into elegant, impactful solutions.</p>
+                <p class="about-bio reveal">My goal is to build deep expertise in computer science, contribute to meaningful research, and develop AI systems that genuinely solve real-world problems.</p>
+            </div>
+            <div class="about-stats">
+                <div class="stat-card reveal">
+                    <span class="stat-icon">⚡</span>
+                    <h3>Problem Solving</h3>
+                    <p>Breaking down complex challenges into clear, logical steps</p>
+                </div>
+                <div class="stat-card reveal">
+                    <span class="stat-icon">🔬</span>
+                    <h3>Research Ability</h3>
+                    <p>Synthesizing information to generate meaningful insights</p>
+                </div>
+                <div class="stat-card reveal">
+                    <span class="stat-icon">🧠</span>
+                    <h3>Logical Thinking</h3>
+                    <p>Structured reasoning across technical and abstract problems</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<footer>
-  <p>© 2026 Shambhavi Karpe</p>
-</footer>
+    <!-- Education -->
+    <section id="education">
+        <div class="section-label">02 — Education</div>
+        <h2 class="section-title reveal">Academic Journey</h2>
+        <div class="timeline">
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">2025 – Present</div>
+                <div class="timeline-card">
+                    <h3>B.Tech in Computer Science Engineering</h3>
+                    <p class="institution">MIT VPU, Solapur</p>
+                    <div class="cert-tags">
+                        <span>Data Analysis</span>
+                        <span>AI</span>
+                        <span>Systems</span>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">12th Grade</div>
+                <div class="timeline-card">
+                    <h3>Higher Secondary Education</h3>
+                    <p class="institution">SMP, Murum</p>
+                </div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">10th Grade</div>
+                <div class="timeline-card">
+                    <h3>Secondary Education</h3>
+                    <p class="institution">Pratibha Niketan Vidyalaya, Murum</p>
+                </div>
+            </div>
+        </div>
 
-<script src="script.js"></script>
+        <!-- Certifications -->
+        <div class="certs-section">
+            <h3 class="subsection-title reveal">Certifications</h3>
+            <div class="certs-grid">
+                <a href="https://coursera.org/share/1a63f233b7483610678ca7db92ce6294" target="_blank" class="cert-card reveal">
+                    <div class="cert-logo">C</div>
+                    <div class="cert-info">
+                        <span class="cert-platform">Coursera</span>
+                        <h4>Introduction to MATLAB</h4>
+                    </div>
+                    <div class="cert-arrow">→</div>
+                </a>
+                <a href="https://coursera.org/share/8dea98aa4d116e807d7582dd2ffb4a65" target="_blank" class="cert-card reveal">
+                    <div class="cert-logo">C</div>
+                    <div class="cert-info">
+                        <span class="cert-platform">Coursera</span>
+                        <h4>Revisiting Chemistry</h4>
+                    </div>
+                    <div class="cert-arrow">→</div>
+                </a>
+                <div class="cert-card reveal">
+                    <div class="cert-logo">Y</div>
+                    <div class="cert-info">
+                        <span class="cert-platform">Yuva</span>
+                        <h4>AI Course for All</h4>
+                    </div>
+                </div>
+                <div class="cert-card reveal">
+                    <div class="cert-logo">Ci</div>
+                    <div class="cert-info">
+                        <span class="cert-platform">Cisco</span>
+                        <h4>AI Course</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <div class="section-label">03 — Projects</div>
+        <h2 class="section-title reveal">Selected Work</h2>
+        <div class="projects-grid">
+            <div class="project-card reveal" data-index="01">
+                <div class="project-num">01</div>
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span>AI</span>
+                        <span>Mental Health</span>
+                    </div>
+                    <h3>AI4All: Mental Health</h3>
+                    <p>Applying artificial intelligence to address mental health challenges — making support more accessible through intelligent systems.</p>
+                </div>
+                <div class="project-icon">🤖</div>
+            </div>
+            <div class="project-card reveal" data-index="02">
+                <div class="project-num">02</div>
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span>Web</span>
+                        <span>Design</span>
+                    </div>
+                    <h3>Smart Dining Space Design & Web Integration</h3>
+                    <p>Designing and integrating a smart dining experience with web technologies for a seamless, modern user interaction.</p>
+                </div>
+                <div class="project-icon">🍽️</div>
+            </div>
+            <div class="project-card reveal" data-index="03">
+                <div class="project-num">03</div>
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span>Sustainability</span>
+                        <span>Research</span>
+                    </div>
+                    <h3>Low Cost Metal Recovery from E-Waste</h3>
+                    <p>Researching affordable methods to recover valuable metals from electronic waste, addressing environmental sustainability.</p>
+                </div>
+                <div class="project-icon">♻️</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="section-label">04 — Contact</div>
+        <div class="contact-inner">
+            <h2 class="section-title reveal">Let's Connect</h2>
+            <p class="contact-sub reveal">Open to research collaborations, internships, and interesting conversations about AI & data.</p>
+            <div class="contact-links reveal">
+                <a href="mailto:shambhavikarpe12@gmail.com" class="contact-item">
+                    <span class="contact-icon">✉</span>
+                    <span>shambhavikarpe12@gmail.com</span>
+                </a>
+                <a href="https://github.com/shambhavikarpe1206-dotcom" target="_blank" class="contact-item">
+                    <span class="contact-icon">⌥</span>
+                    <span>github.com/shambhavikarpe1206-dotcom</span>
+                </a>
+                <div class="contact-item no-link">
+                    <span class="contact-icon">◉</span>
+                    <span>Solapur, India</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Shambhavi Shivanand Karpe</p>
+        <p class="footer-note">Designed with intention.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
